@@ -17,18 +17,18 @@ public class Josephus1 {
             alive[i] = true;
         }
 
-        int count = 1, pos = 0;
+        int count = 1, index = 0;
 
         while (numPeople > 1)
         {
-            while (pos < alive.length)
+            while (index < alive.length)
             {
-                if (alive[pos])
+                if (alive[index])
                 {
                     if (count == killNum)
                     {
-                        alive[pos] = false;
-                        System.out.println("Killed person #" + (pos+1));
+                        alive[index] = false;
+                        System.out.println("Killed person #" + (index+1));
                         count = 1;
                         numPeople--;
                     }
@@ -37,12 +37,12 @@ public class Josephus1 {
                         count++;
                     }
                 }
-                pos++;
+                index++;
             }
-            pos = 0;
+            index = 0;
         }
 
-        while(!alive[pos]) pos++;
-        System.out.println("Last person alive: " + (pos+1));
+        while(!alive[index]) index++;
+        System.out.println("Last person alive: " + (index+1));
     }
 }
