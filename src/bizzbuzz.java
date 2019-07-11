@@ -8,6 +8,9 @@ public class bizzbuzz {
                 else if ((x%10==7) || (x/10==7)) System.out.println("buzz");
                 else System.out.println(x);
             }
+            /*
+                comment block
+             */
         }
     }
 }
