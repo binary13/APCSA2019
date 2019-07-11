@@ -29,13 +29,16 @@ public class FractionTest {
         System.out.println("Three fourths minus two thirds: " + threeFourths.minus(twoThirds) + " = 1/12");
         System.out.println();
 
-        System.out.println("Two thirds is less than three fourths: " + twoThirds.lessThan(threeFourths));
-        System.out.println("Two thirds is greater than three fourths: " + twoThirds.greaterThan(threeFourths));
-        System.out.println("Two thirds is equal to three fourths: " + twoThirds.equals(threeFourths));
-        System.out.println("One half is equal to three sixths: " + new Fraction(1,2).equals(new Fraction(3,6)));
+        // Comparing
+        System.out.println("Two thirds is less than three fourths: true = " + twoThirds.lessThan(threeFourths));
+        System.out.println("Two thirds is greater than three fourths: false = " + twoThirds.greaterThan(threeFourths));
+        System.out.println("Two thirds is equal to three fourths: false = " + twoThirds.equals(threeFourths));
+        System.out.println("One half is equal to three sixths: true = " + new Fraction(1,2).equals(new Fraction(3,6)));
         System.out.println();
 
-        // Comparing
-        System.out.println(threeFourths.compareTo(twoThirds));
+        System.out.println("Three fourths compared to two thirds: 1 = " + threeFourths.compareTo(twoThirds));
+        System.out.println("Two thirds compared to three fourths: -1 = " + twoThirds.compareTo(threeFourths));
+        System.out.println("Two thirds compared to two thirds: 0 = " + twoThirds.compareTo(twoThirds));
+        System.out.println();
     }
 }
