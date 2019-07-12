@@ -23,7 +23,7 @@ public class Josephus1 {
         {
             while (index < alive.length)
             {
-                if (alive[index])
+                if (alive[index] && numPeople > 1)
                 {
                     if (count == killNum)
                     {
@@ -43,6 +43,6 @@ public class Josephus1 {
         }
 
         while(!alive[index]) index++;
-        System.out.println("Last person alive: " + (index+1));
+        System.out.println("Last person alive: #" + (index+1));
     }
 }
